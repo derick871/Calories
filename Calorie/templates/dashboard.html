@@ -15,130 +15,64 @@
         <p class="text-muted">Bootstrap powered local JSON tracker</p>
     </header>
 
-    <div class="row g-4">
-        <div class="col-lg-8">
-            
-            <div class="card border-0 shadow-sm mb-4">
-                <div class="card-body">
-                    <h5 class="card-title fw-bold mb-3"><i class="fa-solid fa-plus-circle text-success me-2"></i>Log Food Item</h5>
-                    <form action="{% url 'add_food' %}" method="POST" class="row g-2">
-                        {% csrf_token %}
-                        <div class="col-md-4">
-                            <input type="text" name="name" class="form-control" placeholder="Food Name" required>
-                        </div>
-                        <div class="col-md-2">
-                            <input type="number" step="any" name="calories" class="form-control" placeholder="kcal" required>
-                        </div>
-                        <div class="col-md-2">
-                            <input type="number" step="any" name="protein" class="form-control" placeholder="Protein (g)">
-                        </div>
-                        <div class="col-md-2">
-                            <input type="number" step="any" name="carbs" class="form-control" placeholder="Carbs (g)">
-                        </div>
-                        <div class="col-md-2">
-                            <input type="number" step="any" name="fats" class="form-control" placeholder="Fats (g)">
-                        </div>
-                        <div class="col-12 mt-3">
-                            <button type="submit" class="btn btn-success w-100 fw-bold">Add Item</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+   {% extends 'base.html' %}
 
-            <div class="card border-0 shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title fw-bold mb-3"><i class="fa-solid fa-utensils text-secondary me-2"></i>Today's Log</h5>
-                    <div class="table-responsive">
-                        <table class="table align-middle">
-                            <thead class="table-light">
-                                <tr>
-                                    <th>Food</th>
-                                    <th>Calories</th>
-                                    <th>Protein</th>
-                                    <th>Carbs</th>
-                                    <th>Fats</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {% for item in foods %}
-                                <tr>
-                                    <td class="fw-bold">{{ item.name }}</td>
-                                    <td><span class="badge bg-secondary">{{ item.calories }} kcal</span></td>
-                                    <td>{{ item.protein }}g</td>
-                                    <td>{{ item.carbs }}g</td>
-                                    <td>{{ item.fats }}g</td>
-                                    <td>
-                                        <a href="{% url 'delete_food' item.id %}" class="btn btn-sm btn-link text-danger p-0">
-                                            <i class="fa-solid fa-trash-can"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                {% empty %}
-                                <tr>
-                                    <td colspan="6" class="text-center text-muted py-4">No food logged today yet!</td>
-                                </tr>
-                                {% endfor %}
-                            </tbody>
-                        </table>
+{% block title %}Overview - NutriTrack{% endblock %}
+
+{% block content %}
+<div class="row g-4 justify-content-center">
+    <div class="col-lg-6">
+        <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+                <h5 class="card-title fw-bold mb-4"><i class="fa-solid fa-heartpulse text-success me-2"></i>Daily Overview</h5>
+                
+                <div class="bg-dark text-white rounded p-4 text-center mb-4">
+                    <h1 class="display-4 fw-bold m-0">{{ remaining_calories|floatformat:0 }}</h1>
+                    <small class="text-uppercase tracking-wider text-muted">Calories Remaining</small>
+                    <div class="progress mt-3" style="height: 6px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: {{ percentages.calories }}%"></div>
+                    </div>
+                    <div class="d-flex justify-content-between mt-2 small text-muted">
+                        <span>Consumed: {{ totals.calories|floatformat:0 }} kcal</span>
+                        <span>Goal: {{ targets.calories }} kcal</span>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="col-lg-4">
-            <div class="card border-0 shadow-sm h-100">
-                <div class="card-body">
-                    <h5 class="card-title fw-bold mb-4"><i class="fa-solid fa-chart-bar text-primary me-2"></i>Daily Overview</h5>
-                    
-                    <div class="bg-dark text-white rounded p-4 text-center mb-4">
-                        <h1 class="display-4 fw-bold m-0">{{ remaining_calories|floatformat:0 }}</h1>
-                        <small class="text-uppercase tracking-wider text-muted">Calories Remaining</small>
-                        <div class="progress mt-3" style="height: 6px;">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: {{ percentages.calories }}%"></div>
-                        </div>
-                        <div class="d-flex justify-content-between mt-2 small text-muted">
-                            <span>Consumed: {{ totals.calories|floatformat:0 }} kcal</span>
-                            <span>Goal: {{ targets.calories }} kcal</span>
-                        </div>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1 small fw-bold">
+                        <span><i class="fa-solid fa-egg text-primary me-1"></i> Protein</span>
+                        <span class="text-muted">{{ totals.protein }}g / {{ targets.protein }}g</span>
                     </div>
-
-                    <div class="mb-3">
-                        <div class="d-flex justify-content-between mb-1 small fw-bold">
-                            <span> Protein</span>
-                            <span class="text-muted">{{ totals.protein }}g / {{ targets.protein }}g</span>
-                        </div>
-                        <div class="progress" style="height: 10px;">
-                            <div class="progress-bar bg-primary" role="progressbar" style="width: {{ percentages.protein }}%"></div>
-                        </div>
+                    <div class="progress" style="height: 10px;">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: {{ percentages.protein }}%"></div>
                     </div>
-
-                    <div class="mb-3">
-                        <div class="d-flex justify-content-between mb-1 small fw-bold">
-                            <span> Carbohydrates</span>
-                            <span class="text-muted">{{ totals.carbs }}g / {{ targets.carbs }}g</span>
-                        </div>
-                        <div class="progress" style="height: 10px;">
-                            <div class="progress-bar bg-warning" role="progressbar" style="width: {{ percentages.carbs }}%"></div>
-                        </div>
-                    </div>
-
-                    <div class="mb-3">
-                        <div class="d-flex justify-content-between mb-1 small fw-bold">
-                            <span> Fats</span>
-                            <span class="text-muted">{{ totals.fats }}g / {{ targets.fats }}g</span>
-                        </div>
-                        <div class="progress" style="height: 10px;">
-                            <div class="progress-bar bg-danger" role="progressbar" style="width: {{ percentages.fats }}%"></div>
-                        </div>
-                    </div>
-
                 </div>
+
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1 small fw-bold">
+                        <span><i class="fa-solid fa-wheat-awn text-warning me-1"></i> Carbohydrates</span>
+                        <span class="text-muted">{{ totals.carbs }}g / {{ targets.carbs }}g</span>
+                    </div>
+                    <div class="progress" style="height: 10px;">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: {{ percentages.carbs }}%"></div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1 small fw-bold">
+                        <span><i class="fa-solid fa-droplet text-danger me-1"></i> Fats</span>
+                        <span class="text-muted">{{ totals.fats }}g / {{ targets.fats }}g</span>
+                    </div>
+                    <div class="progress" style="height: 10px;">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: {{ percentages.fats }}%"></div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
 </div>
-
+{% endblock %}
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
