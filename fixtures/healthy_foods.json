@@ -1,302 +1,52 @@
 [
-    {
-        "id": 1,
-        "name": "Almonds",
-        "category": "Nuts & Seeds",
-        "benefits": "High in vitamin E, antioxidants, and healthy fats."
-    },
-    {
-        "id": 2,
-        "name": "Apples",
-        "category": "Fruits",
-        "benefits": "Rich in fiber, vitamin C, and various antioxidants."
-    },
-    {
-        "id": 3,
-        "name": "Avocados",
-        "category": "Fruits",
-        "benefits": "Loaded with healthy fats instead of carbs."
-    },
-    {
-        "id": 4,
-        "name": "Bananas",
-        "category": "Fruits",
-        "benefits": "Great source of potassium and vitamin B6."
-    },
-    {
-        "id": 5,
-        "name": "Blueberries",
-        "category": "Fruits",
-        "benefits": "Among the world's most powerful sources of antioxidants."
-    },
-    {
-        "id": 6,
-        "name": "Broccoli",
-        "category": "Vegetables",
-        "benefits": "Excellent source of fiber, vitamin C, and vitamin K."
-    },
-    {
-        "id": 7,
-        "name": "Brown Rice",
-        "category": "Grains",
-        "benefits": "Nutritious whole grain with decent amounts of fiber and vitamin B1."
-    },
-    {
-        "id": 8,
-        "name": "Carrots",
-        "category": "Vegetables",
-        "benefits": "Extremely crunchy and loaded with nutrients like fiber and vitamin K."
-    },
-    {
-        "id": 9,
-        "name": "Cauliflower",
-        "category": "Vegetables",
-        "benefits": "Very versatile cruciferous vegetable high in vitamin C and fiber."
-    },
-    {
-        "id": 10,
-        "name": "Chia Seeds",
-        "category": "Nuts & Seeds",
-        "benefits": "Nutrient-dense seeds loaded with fiber and Omega-3 fatty acids."
-    },
-    {
-        "id": 11,
-        "name": "Chicken Breasts",
-        "category": "Meat & Poultry",
-        "benefits": "Low in fat and calories but extremely high in protein."
-    },
-    {
-        "id": 12,
-        "name": "Coconut Oil",
-        "category": "Fats & Oils",
-        "benefits": "Contains medium-chain triglycerides (MCTs) that boost metabolism."
-    },
-    {
-        "id": 13,
-        "name": "Cucumber",
-        "category": "Vegetables",
-        "benefits": "Very low in both carbs and calories, consisting mostly of water."
-    },
-    {
-        "id": 14,
-        "name": "Dark Chocolate",
-        "category": "Snacks",
-        "benefits": "Packed with magnesium and one of the most powerful sources of antioxidants."
-    },
-    {
-        "id": 15,
-        "name": "Eggs",
-        "category": "Dairy & Eggs",
-        "benefits": "Among the most nutritious foods on the planet, highly bioavailable protein."
-    },
-    {
-        "id": 16,
-        "name": "Extra Virgin Olive Oil",
-        "category": "Fats & Oils",
-        "benefits": "Contains heart-healthy monounsaturated fats and powerful antioxidants."
-    },
-    {
-        "id": 17,
-        "name": "Garlic",
-        "category": "Vegetables",
-        "benefits": "Contains allicin, which has powerful bioactive effects and immune support."
-    },
-    {
-        "id": 18,
-        "name": "Ginger",
-        "category": "Spices",
-        "benefits": "Strong anti-inflammatory and antioxidant properties, aids digestion."
-    },
-    {
-        "id": 19,
-        "name": "Greek Yogurt",
-        "category": "Dairy & Eggs",
-        "benefits": "Thick, creamy, and high in protein and gut-friendly probiotics."
-    },
-    {
-        "id": 20,
-        "name": "Green Tea",
-        "category": "Beverages",
-        "benefits": "Loaded with antioxidants and nutrients that have powerful effects on the body."
-    },
-    {
-        "id": 21,
-        "name": "Kale",
-        "category": "Vegetables",
-        "benefits": "Extremely high in vitamin C, vitamin K, and various antioxidants."
-    },
-    {
-        "id": 22,
-        "name": "Kidney Beans",
-        "category": "Legumes",
-        "benefits": "Loaded with fiber and various vitamins and minerals, excellent plant protein."
-    },
-    {
-        "id": 23,
-        "name": "Lemons",
-        "category": "Fruits",
-        "benefits": "Strong citrus fruit high in vitamin C and supports digestion."
-    },
-    {
-        "id": 24,
-        "name": "Lentils",
-        "category": "Legumes",
-        "benefits": "High in fiber and plant-based protein, excellent for heart health."
-    },
-    {
-        "id": 25,
-        "name": "Macadamia Nuts",
-        "category": "Nuts & Seeds",
-        "benefits": "High in monounsaturated fats and lower in Omega-6 fatty acids than most nuts."
-    },
-    {
-        "id": 26,
-        "name": "Oatmeal",
-        "category": "Grains",
-        "benefits": "Loaded with powerful fibers called beta-glucans which lower cholesterol."
-    },
-    {
-        "id": 27,
-        "name": "Onions",
-        "category": "Vegetables",
-        "benefits": "Contain bioactive compounds believed to have health benefits."
-    },
-    {
-        "id": 28,
-        "name": "Oranges",
-        "category": "Fruits",
-        "benefits": "Well known for their vitamin C content, fiber, and antioxidants."
-    },
-    {
-        "id": 29,
-        "name": "Quinoa",
-        "category": "Grains",
-        "benefits": "A complete plant-based protein containing all nine essential amino acids."
-    },
-    {
-        "id": 30,
-        "name": "Salmon",
-        "category": "Seafood",
-        "benefits": "Incredibly popular oily fish loaded with Omega-3 fatty acids."
-    },
-    {
-        "id": 31,
-        "name": "Sardines",
-        "category": "Seafood",
-        "benefits": "Small, oily fish that are highly nutritious, containing almost every nutrient."
-    },
-    {
-        "id": 32,
-        "name": "Shrimp",
-        "category": "Seafood",
-        "benefits": "Low in calories and fat but high in protein, selenium, and vitamin B12."
-    },
-    {
-        "id": 33,
-        "name": "Spinach",
-        "category": "Vegetables",
-        "benefits": "Rich in iron, vitamins A, C, and K, and antioxidants."
-    },
-    {
-        "id": 34,
-        "name": "Strawberries",
-        "category": "Fruits",
-        "benefits": "Highly nutritious and low in both carbs and calories; rich in vitamin C."
-    },
-    {
-        "id": 35,
-        "name": "Sweet Potatoes",
-        "category": "Vegetables",
-        "benefits": "Delicious starchy food loaded with beta-carotene and vitamin A."
-    },
-    {
-        "id": 36,
-        "name": "Tomatoes",
-        "category": "Fruits",
-        "benefits": "Usually categorized as a vegetable, packed with vitamin C and lycopene."
-    },
-    {
-        "id": 37,
-        "name": "Tuna",
-        "category": "Seafood",
-        "benefits": "Very low in fat and calories, while being exceptionally high in protein."
-    },
-    {
-        "id": 38,
-        "name": "Walnuts",
-        "category": "Nuts & Seeds",
-        "benefits": "Highly nutritious and loaded with fiber and various vitamins and minerals."
-    },
-    {
-        "id": 39,
-        "name": "Watermelon",
-        "category": "Fruits",
-        "benefits": "Packed with water, vitamins A and C, and lycopene."
-    },
-    {
-        "id": 40,
-        "name": "Asparagus",
-        "category": "Vegetables",
-        "benefits": "Low in calories, high in vitamin K, folate, and antioxidants."
-    },
-    {
-        "id": 41,
-        "name": "Brussels Sprouts",
-        "category": "Vegetables",
-        "benefits": "High in fiber, vitamin K, vitamin C, and omega-3 fatty acids."
-    },
-    {
-        "id": 42,
-        "name": "Cabbage",
-        "category": "Vegetables",
-        "benefits": "Low-calorie cruciferous vegetable loaded with vitamin K and C."
-    },
-    {
-        "id": 43,
-        "name": "Bell Peppers",
-        "category": "Vegetables",
-        "benefits": "Great source of antioxidants and vitamin C, especially red ones."
-    },
-    {
-        "id": 44,
-        "name": "Celery",
-        "category": "Vegetables",
-        "benefits": "Very low calorie count, high water content, contains antioxidants."
-    },
-    {
-        "id": 45,
-        "name": "Flaxseeds",
-        "category": "Nuts & Seeds",
-        "benefits": "Rich source of micronutrients, dietary fiber, and omega-3 fats."
-    },
-    {
-        "id": 46,
-        "name": "Pumpkin Seeds",
-        "category": "Nuts & Seeds",
-        "benefits": "High in antioxidants, magnesium, zinc, and healthy fatty acids."
-    },
-    {
-        "id": 47,
-        "name": "Turmeric",
-        "category": "Spices",
-        "benefits": "Contains curcumin, a substance with powerful anti-inflammatory effects."
-    },
-    {
-        "id": 48,
-        "name": "Raspberries",
-        "category": "Fruits",
-        "benefits": "High in fiber, vitamin C, and anti-inflammatory antioxidants."
-    },
-    {
-        "id": 49,
-        "name": "Apple Cider Vinegar",
-        "category": "Condiments",
-        "benefits": "May help lower blood sugar levels and promote weight management."
-    },
-    {
-        "id": 50,
-        "name": "Kefir",
-        "category": "Dairy & Eggs",
-        "benefits": "Fermented milk drink that is a superior source of probiotics than yogurt."
-    }
+  { "id": 1, "name": "Almonds", "category": "Nuts & Seeds", "benefits": "High in vitamin E, antioxidants, and healthy fats." },
+  { "id": 2, "name": "Apples", "category": "Fruits", "benefits": "Rich in fiber, vitamin C, and various antioxidants." },
+  { "id": 3, "name": "Avocados", "category": "Fruits", "benefits": "Loaded with healthy fats instead of carbs." },
+  { "id": 4, "name": "Bananas", "category": "Fruits", "benefits": "Great source of potassium and vitamin B6." },
+  { "id": 5, "name": "Blueberries", "category": "Fruits", "benefits": "Among the world's most powerful sources of antioxidants." },
+  { "id": 6, "name": "Broccoli", "category": "Vegetables", "benefits": "Excellent source of fiber, vitamin C, and vitamin K." },
+  { "id": 7, "name": "Brown Rice", "category": "Grains", "benefits": "Nutritious whole grain with decent amounts of fiber and vitamin B1." },
+  { "id": 8, "name": "Carrots", "category": "Vegetables", "benefits": "Extremely crunchy and loaded with nutrients like fiber and vitamin K." },
+  { "id": 9, "name": "Cauliflower", "category": "Vegetables", "benefits": "Very versatile cruciferous vegetable high in vitamin C and fiber." },
+  { "id": 10, "name": "Chia Seeds", "category": "Nuts & Seeds", "benefits": "Nutrient-dense seeds loaded with fiber and Omega-3 fatty acids." },
+  { "id": 11, "name": "Chicken Breasts", "category": "Meat & Poultry", "benefits": "Low in fat and calories but extremely high in protein." },
+  { "id": 12, "name": "Coconut Oil", "category": "Fats & Oils", "benefits": "Contains medium-chain triglycerides (MCTs) that boost metabolism." },
+  { "id": 13, "name": "Cucumber", "category": "Vegetables", "benefits": "Very low in both carbs and calories, consisting mostly of water." },
+  { "id": 14, "name": "Dark Chocolate", "category": "Snacks", "benefits": "Packed with magnesium and one of the most powerful sources of antioxidants." },
+  { "id": 15, "name": "Eggs", "category": "Dairy & Eggs", "benefits": "Among the most nutritious foods on the planet, highly bioavailable protein." },
+  { "id": 16, "name": "Extra Virgin Olive Oil", "category": "Fats & Oils", "benefits": "Contains heart-healthy monounsaturated fats and powerful antioxidants." },
+  { "id": 17, "name": "Garlic", "category": "Vegetables", "benefits": "Contains allicin, which has powerful bioactive effects and immune support." },
+  { "id": 18, "name": "Ginger", "category": "Spices", "benefits": "Strong anti-inflammatory and antioxidant properties, aids digestion." },
+  { "id": 19, "name": "Greek Yogurt", "category": "Dairy & Eggs", "benefits": "Thick, creamy, and high in protein and gut-friendly probiotics." },
+  { "id": 20, "name": "Green Tea", "category": "Beverages", "benefits": "Loaded with antioxidants and nutrients that have powerful effects on the body." },
+  { "id": 21, "name": "Kale", "category": "Vegetables", "benefits": "Extremely high in vitamin C, vitamin K, and various antioxidants." },
+  { "id": 22, "name": "Kidney Beans", "category": "Legumes", "benefits": "Loaded with fiber and various vitamins and minerals, excellent plant protein." },
+  { "id": 23, "name": "Lemons", "category": "Fruits", "benefits": "Strong citrus fruit high in vitamin C and supports digestion." },
+  { "id": 24, "name": "Lentils", "category": "Legumes", "benefits": "High in fiber and plant-based protein, excellent for heart health." },
+  { "id": 25, "name": "Macadamia Nuts", "category": "Nuts & Seeds", "benefits": "High in monounsaturated fats and lower in Omega-6 fatty acids than most nuts." },
+  { "id": 26, "name": "Oatmeal", "category": "Grains", "benefits": "Loaded with powerful fibers called beta-glucans which lower cholesterol." },
+  { "id": 27, "name": "Onions", "category": "Vegetables", "benefits": "Contain bioactive compounds believed to have health benefits." },
+  { "id": 28, "name": "Oranges", "category": "Fruits", "benefits": "Well known for their vitamin C content, fiber, and antioxidants." },
+  { "id": 29, "name": "Quinoa", "category": "Grains", "benefits": "A complete plant-based protein containing all nine essential amino acids." },
+  { "id": 30, "name": "Salmon", "category": "Seafood", "benefits": "Incredibly popular oily fish loaded with Omega-3 fatty acids." },
+  { "id": 31, "name": "Sardines", "category": "Seafood", "benefits": "Small, oily fish that are highly nutritious, containing almost every nutrient." },
+  { "id": 32, "name": "Shrimp", "category": "Seafood", "benefits": "Low in calories and fat but high in protein, selenium, and vitamin B12." },
+  { "id": 33, "name": "Spinach", "category": "Vegetables", "benefits": "Rich in iron, vitamins A, C, and K, and antioxidants." },
+  { "id": 34, "name": "Strawberries", "category": "Fruits", "benefits": "Highly nutritious and low in both carbs and calories; rich in vitamin C." },
+  { "id": 35, "name": "Sweet Potatoes", "category": "Vegetables", "benefits": "Delicious starchy food loaded with beta-carotene and vitamin A." },
+  { "id": 36, "name": "Tomatoes", "category": "Fruits", "benefits": "Usually categorized as a vegetable, packed with vitamin C and lycopene." },
+  { "id": 37, "name": "Tuna", "category": "Seafood", "benefits": "Very low in fat and calories, while being exceptionally high in protein." },
+  { "id": 38, "name": "Walnuts", "category": "Nuts & Seeds", "benefits": "Highly nutritious and loaded with fiber and various vitamins and minerals." },
+  { "id": 39, "name": "Watermelon", "category": "Fruits", "benefits": "Packed with water, vitamins A and C, and lycopene." },
+  { "id": 40, "name": "Asparagus", "category": "Vegetables", "benefits": "Low in calories, high in vitamin K, folate, and antioxidants." },
+  { "id": 41, "name": "Brussels Sprouts", "category": "Vegetables", "benefits": "High in fiber, vitamin K, vitamin C, and omega-3 fatty acids." },
+  { "id": 42, "name": "Cabbage", "category": "Vegetables", "benefits": "Low-calorie cruciferous vegetable loaded with vitamin K and C." },
+  { "id": 43, "name": "Bell Peppers", "category": "Vegetables", "benefits": "Great source of antioxidants and vitamin C, especially red ones." },
+  { "id": 44, "name": "Celery", "category": "Vegetables", "benefits": "Very low calorie count, high water content, contains antioxidants." },
+  { "id": 45, "name": "Flaxseeds", "category": "Nuts & Seeds", "benefits": "Rich source of micronutrients, dietary fiber, and omega-3 fats." },
+  { "id": 46, "name": "Pumpkin Seeds", "category": "Nuts & Seeds", "benefits": "High in antioxidants, magnesium, zinc, and healthy fatty acids." },
+  { "id": 47, "name": "Turmeric", "category": "Spices", "benefits": "Contains curcumin, a substance with powerful anti-inflammatory effects." },
+  { "id": 48, "name": "Raspberries", "category": "Fruits", "benefits": "High in fiber, vitamin C, and anti-inflammatory antioxidants." },
+  { "id": 49, "name": "Apple Cider Vinegar", "category": "Condiments", "benefits": "May help lower blood sugar levels and promote weight management." },
+  { "id": 50, "name": "Kefir", "category": "Dairy & Eggs", "benefits": "Fermented milk drink that is a superior source of probiotics than yogurt." }
 ]

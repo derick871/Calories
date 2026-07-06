@@ -14,6 +14,7 @@ def login(request):
 def dashboard(request):
     return render(request, 'dashboard.html')
 
+
 def subscriber(request):
     if request.method == 'POST':
         email = request.POST.get('email')
