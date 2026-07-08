@@ -14,6 +14,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config("SECRET_KEY")
+SECRET_KEY = config("SECRET_KEY", default="django-insecure-fallback-key-for-local-dev")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # Tip: You can also manage this via .env, e.g., config("DEBUG", default=False, cast=bool)
@@ -33,7 +34,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     # Custom Apps
-    'myapp',
+    'Calorie',
 ]
 
 MIDDLEWARE = [
@@ -46,7 +47,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'my_project.urls'
+ROOT_URLCONF = 'Calorie.urls'
 
 TEMPLATES = [
     {
@@ -74,7 +75,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': config("DB_NAME", default="Derrick"),
         'USER': config("DB_USER", default="Wanyama"),
-        'PASSWORD': config("DB_PASSWORD", default="Derick871"),
+        'PASSWORD': config("DB_PASSWORD", default="Derick4@"),
         'HOST': config("DB_HOST", default="localhost"),
         'PORT': config("DB_PORT", default="5432"),
     }
