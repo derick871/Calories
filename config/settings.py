@@ -47,7 +47,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'Calorie.urls'
+ROOT_URLCONF = 'config.urls'
 
 TEMPLATES = [
     {
@@ -64,7 +64,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'my_project.wsgi.application'
+WSGI_APPLICATION = 'config.wsgi.application'
 
 
 # Database
@@ -73,9 +73,9 @@ WSGI_APPLICATION = 'my_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config("DB_NAME", default="Derrick"),
-        'USER': config("DB_USER", default="Wanyama"),
-        'PASSWORD': config("DB_PASSWORD", default="Derick4@"),
+        'NAME': config("DB_NAME", default="Author_db"),
+        'USER': config("DB_USER", default="Derick"),
+        'PASSWORD': config("DB_PASSWORD", default="derick871"),
         'HOST': config("DB_HOST", default="localhost"),
         'PORT': config("DB_PORT", default="5432"),
     }
@@ -114,4 +114,4 @@ STATICFILES_DIRS = [
     BASE_DIR / "static"
 ]
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
