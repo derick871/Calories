@@ -14,15 +14,16 @@
             <small class="text-muted">Sign in to track your macros</small>
         </div>
         
-        {% with messages = get_flashed_messages(with_categories=true) %}
-            {% if messages %}
-                {% for cat, msg in messages %}
-                    <div class="alert alert-{{ 'danger' if cat == 'error' else cat }} p-2 small border-0 mb-3">{{ msg }}</div>
-                {% endfor %}
-            {% endif %}
-        {% endwith %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{% if message.tags == 'error' %}danger{% else %}{{ message.tags }}{% endif %} p-2 small border-0 mb-3">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
 
         <form method="POST">
+            {% csrf_token %} <!-- Essential Django Security Tag -->
             <div class="mb-3">
                 <label class="form-label small fw-bold text-secondary">Email Address</label>
                 <input type="email" name="email" class="form-control" placeholder="name@example.com" required>
@@ -34,7 +35,7 @@
             <button type="submit" class="btn btn-primary w-100 fw-semibold py-2">Sign In</button>
         </form>
         
-        <p class="text-center mt-4 small text-muted">New here? <a href="{{ url_for('register') }}" class="text-decoration-none">Create an account</a></p>
+        <p class="text-center mt-4 small text-muted">New here? <a href="{% url 'register' %}" class="text-decoration-none">Create an account</a></p>
     </div>
 
 </body>
