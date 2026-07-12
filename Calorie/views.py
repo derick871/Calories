@@ -14,6 +14,9 @@ def login(request):
 def dashboard(request):
     return render(request, 'dashboard.html')
 
+def food_list(request,):
+    return render(request, 'food_list')
+
 
 def subscriber(request):
     if request.method == 'POST':
