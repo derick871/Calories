@@ -14,13 +14,13 @@
             <small class="text-muted">Start keeping tabs on your nutrition</small>
         </div>
         
-        {% with messages = get_flashed_messages(with_categories=true) %}
+        <!-- {% with messages = get_flashed_messages(with_categories=true) %} -->
             {% if messages %}
                 {% for cat, msg in messages %}
                     <div class="alert alert-{{ 'danger' if cat == 'error' else cat }} p-2 small border-0 mb-3">{{ msg }}</div>
                 {% endfor %}
             {% endif %}
-        {% endwith %}
+        <!-- {% endwith %} -->
 
         <form method="POST">
             <div class="mb-3">
